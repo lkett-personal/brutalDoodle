@@ -7,7 +7,16 @@ extends CharacterBody2D
 @export var sprite : AnimatedSprite2D
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func _ready() -> void:
+	GameManager.phase_changed.connect(_on_phase_changed)
+	
+func _on_phase_changed(new_phase: GameManager.Phase) -> void:
+	set_process_input(new_phase == GameManager.Phase.SIMULATE)
+	
 func _physics_process(delta):
+	if GameManager.current_phase != GameManager.Phase.SIMULATE:
+		return
+		
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	if Input.is_action_just_pressed("jump") and is_on_floor():

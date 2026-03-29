@@ -46,7 +46,7 @@
 [ext_resource type="Texture2D" uid="uid://bwdfghg7m640r" path="res://textures/ground1.png" id="22_2ic1b"]
 [ext_resource type="Script" uid="uid://g8qschgj2d1o" path="res://scripts/managers/gem.gd" id="43_l1cy0"]
 [ext_resource type="Script" uid="uid://131tro7lwl2n" path="res://scripts/ui/countdown.gd" id="48_5ufao"]
-[ext_resource type="PackedScene" uid="uid://c6fsi0mupiyln" path="res://scenes/UI.tscn" id="48_64jtb"]
+[ext_resource type="PackedScene" uid="uid://c6fsi0mupiyln" path="res://scenes/UILeft.tscn" id="48_64jtb"]
 [ext_resource type="Texture2D" uid="uid://dco08sr374slt" path="res://textures/gem2.png" id="49_l1cy0"]
 [ext_resource type="Texture2D" uid="uid://34qi7nofsb4t" path="res://textures/gem_outline1.png" id="51_f38iv"]
 [ext_resource type="Texture2D" uid="uid://c7lahhsbqennb" path="res://textures/gem_outline2.png" id="52_ka4tf"]
@@ -391,7 +391,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_c2xgb")
 
-[node name="Countdown" type="RichTextLabel" parent="Background" unique_id=827958779 node_paths=PackedStringArray("timer")]
+[node name="Countdown" type="RichTextLabel" parent="Background" unique_id=827958779]
 custom_minimum_size = Vector2(64, 64)
 anchors_preset = 5
 anchor_left = 0.5
@@ -406,11 +406,5 @@ text = "60"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("48_5ufao")
-timer = NodePath("Timer")
 
-[node name="Timer" type="Timer" parent="Background/Countdown" unique_id=2085097366]
-wait_time = 10.0
-one_shot = true
-autostart = true
-
-[node name="Palette" parent="." unique_id=442676211 instance=ExtResource("48_64jtb")]
+[node name="PaletteLeft" parent="." unique_id=442676211 instance=ExtResource("48_64jtb")]

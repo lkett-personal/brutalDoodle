@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b06wmss8pusu3" path="res://scenes/Plank.tscn" id="9_ukj8e"]
 [ext_resource type="PackedScene" uid="uid://dw1rpua5ui8yo" path="res://scenes/Circle.tscn" id="10_w7enk"]
 
-[node name="Palette" type="CanvasLayer" unique_id=442676211]
+[node name="PaletteLeft" type="CanvasLayer" unique_id=442676211]
 
 [node name="TabContainer" type="TabContainer" parent="." unique_id=583961111]
 anchors_preset = -1

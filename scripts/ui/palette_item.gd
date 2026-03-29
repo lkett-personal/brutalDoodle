@@ -11,13 +11,19 @@ func _ready() -> void:
 	self.text = display_name
 	if icon_texture:
 		self.icon = icon_texture
+	GameManager.phase_changed.connect(_on_phase_changed)
+	_on_phase_changed(GameManager.current_phase)
+
+func _on_phase_changed(phase: GameManager.Phase) -> void:
+	self.modulate = Color(1, 1, 1, 1) if phase == GameManager.Phase.BUILD_ATTACK else Color(1, 1, 1, 0.4)
 
 func _gui_input(event: InputEvent) -> void:
+	if GameManager.current_phase != GameManager.Phase.BUILD_ATTACK:
+		return
 	if not event is InputEventMouseButton:
 		return
 	if event.button_index != MOUSE_BUTTON_LEFT:
 		return
-
 	if event.pressed:
 		_dragging = true
 		_spawn_preview()
