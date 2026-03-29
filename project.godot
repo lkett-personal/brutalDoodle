@@ -15,12 +15,20 @@ run/main_scene="res://scenes/Debug.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*uid://d0yqpy1m1r728"
+
 [display]
 
 window/size/viewport_width=960
 window/size/viewport_height=540
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
+
+[global_group]
+
+infiltrator=""
 
 [input]
 
