@@ -1,0 +1,25 @@
+[remap]
+
+importer="font_data_image"
+type="FontFile"
+uid="uid://rem3njt3ijdl"
+path="res://.godot/imported/scribble_scribe.png-f73d97297ebf0a1553fed010737bc315.fontdata"
+
+[deps]
+
+source_file="res://fonts/scribble_scribe.png"
+dest_files=["res://.godot/imported/scribble_scribe.png-f73d97297ebf0a1553fed010737bc315.fontdata"]
+
+[params]
+
+character_ranges=PackedStringArray()
+kerning_pairs=PackedStringArray()
+columns=8
+rows=5
+image_margin=Rect2i(0, 0, 0, 0)
+character_margin=Rect2i(0, 0, 8, 8)
+ascent=0
+descent=0
+fallbacks=[]
+compress=false
+scaling_mode=2

@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://c6fsi0mupiyln"]
+
+[ext_resource type="PackedScene" uid="uid://koht2vm5vc7p" path="res://scenes/Palette Item.tscn" id="1_dj8aq"]
+[ext_resource type="PackedScene" uid="uid://cwurrnyaewkq0" path="res://scenes/Car.tscn" id="2_5en4g"]
+[ext_resource type="Texture2D" uid="uid://duw8v7cchwi0b" path="res://textures/ui/carIcon.png" id="3_ua6yw"]
+[ext_resource type="Texture2D" uid="uid://dkwymdp8egfhc" path="res://textures/ui/catapultIcon.png" id="4_3wlde"]
+[ext_resource type="Texture2D" uid="uid://c3lkqaj2h35tu" path="res://textures/ui/bombIcon.png" id="5_xpksx"]
+[ext_resource type="Texture2D" uid="uid://cj1u6mseatad4" path="res://textures/ui/anvilIcon.png" id="6_24e4x"]
+[ext_resource type="PackedScene" uid="uid://cgtbv5fqewxjr" path="res://scenes/Block.tscn" id="7_24e4x"]
+[ext_resource type="Texture2D" uid="uid://dyqkv4cxo1w2d" path="res://textures/ui/button.png" id="8_24e4x"]
+[ext_resource type="PackedScene" uid="uid://b06wmss8pusu3" path="res://scenes/Plank.tscn" id="9_ukj8e"]
+[ext_resource type="PackedScene" uid="uid://dw1rpua5ui8yo" path="res://scenes/Circle.tscn" id="10_w7enk"]
+
+[node name="Palette" type="CanvasLayer" unique_id=442676211]
+
+[node name="TabContainer" type="TabContainer" parent="." unique_id=583961111]
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = 0.8
+anchor_right = 0.35
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_alignment = 1
+current_tab = 0
+tab_0/title = "PROPS"
+tab_1/title = "BLOCKS"
+
+[node name="PropsContainer" type="HBoxContainer" parent="TabContainer" unique_id=1590765915]
+layout_mode = 2
+metadata/_tab_index = 0
+metadata/_tab_name = "PROPS"
+
+[node name="Car" parent="TabContainer/PropsContainer" unique_id=1829594318 instance=ExtResource("1_dj8aq")]
+layout_mode = 2
+text = "CAR
+"
+scene_to_place = ExtResource("2_5en4g")
+display_name = "CAR"
+icon_texture = ExtResource("3_ua6yw")
+
+[node name="Catapult" parent="TabContainer/PropsContainer" unique_id=770547384 instance=ExtResource("1_dj8aq")]
+layout_mode = 2
+text = "CATAPULT"
+scene_to_place = ExtResource("2_5en4g")
+display_name = "CATAPULT"
+icon_texture = ExtResource("4_3wlde")
+
+[node name="Bomb" parent="TabContainer/PropsContainer" unique_id=1408993633 instance=ExtResource("1_dj8aq")]
+layout_mode = 2
+text = "BOMB"
+scene_to_place = ExtResource("2_5en4g")
+display_name = "BOMB"
+icon_texture = ExtResource("5_xpksx")
+
+[node name="Anvil" parent="TabContainer/PropsContainer" unique_id=110100024 instance=ExtResource("1_dj8aq")]
+layout_mode = 2
+text = "ANVIL"
+scene_to_place = ExtResource("2_5en4g")
+display_name = "ANVIL"
+icon_texture = ExtResource("6_24e4x")
+
+[node name="BlocksContainer" type="HBoxContainer" parent="TabContainer" unique_id=1174454047]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+metadata/_tab_name = "BLOCKS"
+
+[node name="Square" parent="TabContainer/BlocksContainer" unique_id=2064081407 instance=ExtResource("1_dj8aq")]
+layout_mode = 2
+scene_to_place = ExtResource("7_24e4x")
+display_name = "Block"
+icon_texture = ExtResource("8_24e4x")
+
+[node name="Plank" parent="TabContainer/BlocksContainer" unique_id=1376946413 instance=ExtResource("1_dj8aq")]
+layout_mode = 2
+scene_to_place = ExtResource("9_ukj8e")
+display_name = "Plank"
+
+[node name="Cicle" parent="TabContainer/BlocksContainer" unique_id=559963282 instance=ExtResource("1_dj8aq")]
+layout_mode = 2
+scene_to_place = ExtResource("10_w7enk")
+display_name = "Circle"
+
+[node name="Triangle" parent="TabContainer/BlocksContainer" unique_id=1471302930 instance=ExtResource("1_dj8aq")]
+layout_mode = 2

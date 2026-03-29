@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://koht2vm5vc7p"]
+
+[ext_resource type="Texture2D" uid="uid://dyqkv4cxo1w2d" path="res://textures/ui/button.png" id="1_smxnm"]
+[ext_resource type="Script" uid="uid://cbh37pcklv6ou" path="res://scripts/ui/palette_item.gd" id="2_cwha8"]
+
+[node name="PaletteItem" type="Button" unique_id=1829594318]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 16
+theme_override_font_sizes/font_size = 16
+text = "crossbow"
+icon = ExtResource("1_smxnm")
+flat = true
+autowrap_trim_flags = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+script = ExtResource("2_cwha8")

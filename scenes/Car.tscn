@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cwurrnyaewkq0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ic1b"]
+size = Vector2(163, 100)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xwory"]
+radius = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eqct8"]
+radius = 32.0
+
+[node name="Car" type="RigidBody2D" unique_id=922246990]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1745078643]
+position = Vector2(71.5, -50)
+shape = SubResource("RectangleShape2D_2ic1b")
+
+[node name="WheelBack" type="RigidBody2D" parent="." unique_id=1086464967]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WheelBack" unique_id=250726665]
+shape = SubResource("CircleShape2D_xwory")
+
+[node name="WheelFront" type="RigidBody2D" parent="." unique_id=401422780]
+position = Vector2(99, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WheelFront" unique_id=1389979236]
+position = Vector2(44, 0)
+shape = SubResource("CircleShape2D_eqct8")
+
+[node name="spring" type="PinJoint2D" parent="." unique_id=2053226662]
+node_a = NodePath("..")
+node_b = NodePath("../WheelBack")
+softness = 2.0
+
+[node name="spring2" type="PinJoint2D" parent="." unique_id=1218607417]
+position = Vector2(143, -1)
+node_a = NodePath("..")
+node_b = NodePath("../WheelFront")
+softness = 2.0

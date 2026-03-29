@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b06wmss8pusu3"]
+
+[ext_resource type="Texture2D" uid="uid://3atmwkuik740" path="res://textures/plank.png" id="1_p7tvc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qvtby"]
+size = Vector2(256, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hh0w0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_p7tvc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Plank" type="RigidBody2D" unique_id=1017320151]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1619070564]
+shape = SubResource("RectangleShape2D_qvtby")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1465591520]
+sprite_frames = SubResource("SpriteFrames_hh0w0")

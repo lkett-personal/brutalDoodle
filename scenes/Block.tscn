@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cgtbv5fqewxjr"]
+
+[ext_resource type="Texture2D" uid="uid://0s1ngsujdv2x" path="res://textures/block1.png" id="1_bwmav"]
+[ext_resource type="Texture2D" uid="uid://bxgyrflk20cj4" path="res://textures/block2.png" id="2_wtxr1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p57g7"]
+size = Vector2(128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xpsld"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bwmav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wtxr1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Block" type="RigidBody2D" unique_id=1682278269]
+mass = 15.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=751054735]
+shape = SubResource("RectangleShape2D_p57g7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1343311939]
+sprite_frames = SubResource("SpriteFrames_xpsld")
+autoplay = "default"

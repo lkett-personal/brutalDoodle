@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://31rjpi1m5h5h"
+path="res://.godot/imported/joycat-mog.gif-ea7a858d828826e1bfce510811e9f10f.tres"
+
+[deps]
+
+source_file="res://textures/joycat-mog.gif"
+dest_files=["res://.godot/imported/joycat-mog.gif-ea7a858d828826e1bfce510811e9f10f.tres"]
+
+[params]
+
+frames_per_second=30

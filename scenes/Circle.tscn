@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dw1rpua5ui8yo"]
+
+[ext_resource type="Texture2D" uid="uid://j0vev7xoh3bl" path="res://textures/circle.png" id="1_ukm0r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ecwll"]
+radius = 32.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_imbf2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ukm0r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=1513414206]
+mass = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=357415368]
+shape = SubResource("CircleShape2D_ecwll")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=253057095]
+sprite_frames = SubResource("SpriteFrames_imbf2")
+autoplay = "default"
